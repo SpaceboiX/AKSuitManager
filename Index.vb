@@ -11,7 +11,8 @@ Public Class Index
 
         AllowDrop = True
 
-        SevenZip.SevenZipExtractor.SetLibraryPath("7z.dll")
+        Dim dllPath As String = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "7z.dll")
+        SevenZip.SevenZipExtractor.SetLibraryPath(dllPath)
 
         If statusDropdown IsNot Nothing Then
             statusDropdown.Items.Clear()
