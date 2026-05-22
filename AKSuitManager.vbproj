@@ -10,14 +10,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="7z.dll" />
+    <None Remove="Native\7z.dll" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="7z.dll">
+    <Content Include="icon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Native\7z.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="icon.ico" />
   </ItemGroup>
 
   <ItemGroup>

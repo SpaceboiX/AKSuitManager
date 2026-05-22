@@ -11,7 +11,7 @@ Public Class Index
 
         AllowDrop = True
 
-        Dim dllPath As String = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "7z.dll")
+        Dim dllPath As String = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Native", "7z.dll")
         SevenZip.SevenZipExtractor.SetLibraryPath(dllPath)
 
         If statusDropdown IsNot Nothing Then
