@@ -30,7 +30,9 @@ Public Class Index
                 "Catwoman",
                 "Nightwing",
                 "Harley Quinn",
-                "Red Hood"
+                "Red Hood",
+                "Azrael",
+                "Batgirl"
             })
             typeDropdown.SelectedIndex = 0
         End If
@@ -287,14 +289,16 @@ Public Class Index
 
         For Each f In files
             Dim name = Path.GetFileName(f).ToLower()
-
+            
             If {"playable_batman", "playable_dlcbatman"}.Any(Function(s) name.Contains(s)) Then Return "Batman"
-            If {"playable_batmobile", "playable_dlcbatmobile"}.Any(Function(s) name.Contains(s)) Then Return "Batmobile"
-            If {"playable_robin", "playable_dlcrobin"}.Any(Function(s) name.Contains(s)) Then Return "Robin"
-            If {"playable_catwoman", "playable_dlccatwoman"}.Any(Function(s) name.Contains(s)) Then Return "Catwoman"
-            If {"playable_nightwing", "playable_dlcnightwing"}.Any(Function(s) name.Contains(s)) Then Return "Nightwing"
+            If {"playable_batmobile", "playable_batmobile"}.Any(Function(s) name.Contains(s)) Then Return "Batmobile"
+            If {"playable_robin", "playable_robin"}.Any(Function(s) name.Contains(s)) Then Return "Robin"
+            If {"playable_catwoman", "playable_catwoman"}.Any(Function(s) name.Contains(s)) Then Return "Catwoman"
+            If {"playable_nightwing", "playable_nightwing"}.Any(Function(s) name.Contains(s)) Then Return "Nightwing"
             If {"playable_harleyquinn", "playable_harleyquinn"}.Any(Function(s) name.Contains(s)) Then Return "Harley Quinn"
             If {"playable_redhood", "playable_dlcredhood"}.Any(Function(s) name.Contains(s)) Then Return "Red Hood"
+            If {"playable_azrael", "playable_azrael"}.Any(Function(s) name.Contains(s)) Then Return "Azarael"
+            If {"playable_batgirl", "playable_dlcbatgirl"}.Any(Function(s) name.Contains(s)) Then Return "Batgirl"                                                                
         Next
 
         Return "Unknown"
@@ -344,7 +348,9 @@ Public Class Index
         {"Catwoman", 4},
         {"Nightwing", 5},
         {"Harley Quinn", 6},
-        {"Red Hood", 7}
+        {"Red Hood", 7},
+        {"Azrael", 7} ,
+        {"Batgirl", 8}                                                                                    
     }
 
         Dim status As String = If(statusDropdown?.SelectedItem?.ToString(), "All")
