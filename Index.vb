@@ -32,7 +32,8 @@ Public Class Index
                 "Harley Quinn",
                 "Red Hood",
                 "Azrael",
-                "Batgirl"
+                "Batgirl",
+                '--"Joker"--
             })
             typeDropdown.SelectedIndex = 0
         End If
@@ -295,10 +296,11 @@ Public Class Index
             If {"playable_robin", "playable_robin"}.Any(Function(s) name.Contains(s)) Then Return "Robin"
             If {"playable_catwoman", "playable_catwoman"}.Any(Function(s) name.Contains(s)) Then Return "Catwoman"
             If {"playable_nightwing", "playable_nightwing"}.Any(Function(s) name.Contains(s)) Then Return "Nightwing"
-            If {"playable_harleyquinn", "playable_harleyquinn"}.Any(Function(s) name.Contains(s)) Then Return "Harley Quinn"
+            If {"playable_harleyquinn", "playable_dlcharleyquinn"}.Any(Function(s) name.Contains(s)) Then Return "Harley Quinn"
             If {"playable_redhood", "playable_dlcredhood"}.Any(Function(s) name.Contains(s)) Then Return "Red Hood"
             If {"playable_azrael", "playable_azrael"}.Any(Function(s) name.Contains(s)) Then Return "Azarael"
-            If {"playable_batgirl", "playable_dlcbatgirl"}.Any(Function(s) name.Contains(s)) Then Return "Batgirl"                                                                
+            If {"playable_batgirl", "playable_dlcbatgirl"}.Any(Function(s) name.Contains(s)) Then Return "Batgirl"
+            '---If {"playable_batgirl", "playable_joker"}.Any(Function(s) name.Contains(s)) Then Return "Joker"                                                                        
         Next
 
         Return "Unknown"
@@ -350,7 +352,8 @@ Public Class Index
         {"Harley Quinn", 6},
         {"Red Hood", 7},
         {"Azrael", 7} ,
-        {"Batgirl", 8}                                                                                    
+        {"Batgirl", 8}
+        '---(,"Joker", 9)                                                                                    
     }
 
         Dim status As String = If(statusDropdown?.SelectedItem?.ToString(), "All")
